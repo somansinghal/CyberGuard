@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CyberGuard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<header>
+
+<img src="cs-logo.png" class="logo">
+
+<h1>CyberGuard</h1>
+<p>Cybersecurity Password Analyzer</p>
+
+</header>
+
+<nav>
+
+    <button onclick="openTab('password')">Password Analyzer</button>
+    
+    <button onclick="openTab('generator')">Password Generator</button>
+    
+    <button onclick="openTab('hash')">Hash Generator</button>
+    
+    <button onclick="openTab('email')">Email Breach Check</button>
+    
+</nav>
+
+<div class="container">
+
+<!-- PASSWORD ANALYZER -->
+
+<section id="password" class="tab active">
+
+<input id="passwordInput" type="password" placeholder="Enter password">
+
+<button onclick="analyzePassword()">Analyze</button>
+
+<div id="scanLoader">
+
+<p>Security Scan Running...</p>
+
+<div class="scan-bar">
+<div id="scanProgress"></div>
+</div>
+
+</div>
+
+<div class="meter">
+<div id="meterBar"></div>
+</div>
+
+<p>Strength: <span id="strength"></span></p>
+<p>Entropy: <span id="entropy"></span></p>
+<p>Security Score: <span id="score"></span></p>
+
+<h3>Password Complexity</h3>
+<ul id="complexity"></ul>
+
+<h3>Terminal Scan</h3>
+
+<div id="terminal"></div>
+
+</section>
+
+<!-- PASSWORD GENERATOR -->
+
+<section id="generator" class="tab">
+
+<input id="length" type="number" value="16">
+
+<button onclick="generatePassword()">Generate Password</button>
+
+<p id="generated"></p>
+
+</section>
+
+<!-- HASH GENERATOR -->
+
+<section id="hash" class="tab">
+
+<input id="hashInput" placeholder="Text to hash">
+
+<button onclick="generateHashes()">Generate</button>
+
+<p>SHA256: <span id="sha256"></span></p>
+
+</section>
+
+<!-- EMAIL BREACH CHECK -->
+
+<section id="email" class="tab">
+
+<input id="emailInput" placeholder="Enter email">
+
+<button onclick="checkEmail()">Check</button>
+
+<p id="emailResult"></p>
+
+</section>
+
+</div>
+
+<script src="matrix.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

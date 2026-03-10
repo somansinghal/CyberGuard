@@ -1,0 +1,114 @@
+body{
+    background:#0b0f1a;
+    color:#00ff9c;
+    font-family:monospace;
+    text-align:center;
+    margin:0;
+    padding:0;
+    }
+    
+    #matrix{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    }
+    
+    header{
+    margin-top:60px;
+    }
+    
+    .logo{
+    width:90px;
+    }
+    
+    nav{
+    margin-top:20px;
+    }
+    
+    nav button{
+    padding:10px 20px;
+    margin:6px;
+    background:#00ff9c;
+    border:none;
+    cursor:pointer;
+    }
+    
+    .container{
+    background:rgba(18,25,43,0.9);
+    padding:30px;
+    border-radius:10px;
+    width:450px;
+    margin:30px auto;
+    }
+    
+    input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+    background:black;
+    color:#00ff9c;
+    border:1px solid #00ff9c;
+    }
+    
+    button{
+    padding:10px 20px;
+    background:#00ff9c;
+    border:none;
+    margin:10px;
+    cursor:pointer;
+    }
+    
+    .tab{
+    display:none;
+    }
+    
+    .tab.active{
+    display:block;
+    }
+    
+    .meter{
+    width:100%;
+    height:20px;
+    background:#111;
+    border-radius:10px;
+    margin:10px 0;
+    }
+    
+    #meterBar{
+    height:100%;
+    width:0%;
+    background:#00ff9c;
+    border-radius:10px;
+    }
+    
+    #terminal{
+    background:black;
+    color:#00ff9c;
+    padding:15px;
+    height:120px;
+    overflow:auto;
+    text-align:left;
+    font-size:14px;
+    }
+    
+    #scanLoader{
+    display:none;
+    margin-top:15px;
+    }
+    
+    .scan-bar{
+    width:100%;
+    height:18px;
+    background:#111;
+    border-radius:10px;
+    overflow:hidden;
+    }
+    
+    #scanProgress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#00ff9c,#00ffaa,#00ff9c);
+    }
